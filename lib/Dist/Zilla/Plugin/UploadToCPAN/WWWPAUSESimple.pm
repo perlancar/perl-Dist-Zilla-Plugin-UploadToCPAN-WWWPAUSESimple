@@ -138,6 +138,7 @@ sub release {
   #print "D: username: ", $self->username, "\n";
   #print "D: password: ", $self->password, "\n";
 
+  $self->log(["Uploading %s to CPAN ...", $archive]);
   my $res = WWW::PAUSE::Simple::upload_file(
       username    => $self->username,
       password    => $self->password,

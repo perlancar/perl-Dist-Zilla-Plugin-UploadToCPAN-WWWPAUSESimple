@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-Plugin-UploadToCPAN-WWWPAUSESimple
 
-0.02     2016-07-13 (PERLANCAR) (unreleased)
+0.02     2016-07-13 (PERLANCAR)
 
          - Rename dist from Dist-Zilla-Plugin-PERLANCAR-UploadToCPAN to
            Dist-Zilla-Plugin-UploadToCPAN-WWWPAUSESimple.
