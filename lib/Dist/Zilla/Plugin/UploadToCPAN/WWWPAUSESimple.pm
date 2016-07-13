@@ -138,7 +138,7 @@ sub release {
   #print "D: username: ", $self->username, "\n";
   #print "D: password: ", $self->password, "\n";
 
-  $self->log(["Uploading %s to CPAN ...", $archive]);
+  $self->log(["Uploading %s to CPAN ...", "$archive"]);
   my $res = WWW::PAUSE::Simple::upload_file(
       username    => $self->username,
       password    => $self->password,
@@ -147,7 +147,11 @@ sub release {
       retries     => $self->retries,
       retry_delay => $self->retry_delay,
   );
-  $self->log_fatal(["Upload failed: %s", $res]) unless $res->[0] == 200;
+  if ($res->[0] == 200) {
+      $self->log(["Upload succeeded: %s", $res]);
+  } else {
+      $self->log_fatal(["Upload failed: %s", $res]);
+  }
 
 }
 
