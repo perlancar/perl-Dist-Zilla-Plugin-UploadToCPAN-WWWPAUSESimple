@@ -1,3 +1,11 @@
+0.04    2017-01-12 (PERLANCAR)
+
+	- Adjust to WWW::PAUSE::Simple 0.34 (old function name upload_file
+	  removed).
+
+	- [ux] Log on success.
+
+
 0.03    2016-07-13 (PERLANCAR)
 
 	- No functional changes.
